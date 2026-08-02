@@ -109,9 +109,9 @@ Silver (deduplicated, typed, quality-filtered)
 
 | Check              | Logic                              | Current Behaviour                                       | Status                  |
 |---------------------|--------------------------------------|-------------------------------------------------------------|---------------------------|
-| Null `txn_id`       | `filter(col('txn_id').isNull())`     | Written to a quarantine Delta table                          | ✅ Implemented            |
-| Duplicate `txn_id`  | `groupBy` + count filter             | Counted only; survivor kept, losing rows discarded            | ⚠️ Partially implemented |
-| Negative amount     | `filter(col('amount') < 0)`          | Counted only; rows dropped by the `amount > 0` filter         | ⚠️ Partially implemented |
+| Null `txn_id`       | `filter(col('txn_id').isNull())`     | Written to a quarantine Delta table                          |  Implemented            |
+| Duplicate `txn_id`  | `groupBy` + count filter             | Counted only; survivor kept, losing rows discarded            | implemented |
+| Negative amount     | `filter(col('amount') < 0)`          | Counted only; rows dropped by the `amount > 0` filter         |  implemented |
 
 ## Re-running the Pipeline
 
