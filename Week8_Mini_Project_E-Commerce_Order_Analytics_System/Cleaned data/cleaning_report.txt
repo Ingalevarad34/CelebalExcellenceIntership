@@ -1,0 +1,17 @@
+DATA CLEANING REPORT
+========================================
+
+orders.csv:
+  - missing_customer_id: 107
+  - bad_date_format_fixed: 145
+  - unparseable_dates: 0
+products.csv:
+  - product_names_normalized: 35
+order_items.csv:
+  - discount_percent_out_of_range: 0
+  - negative_quantity_rows_returns: 157
+  - zero_quantity_rows: 0
+customers.csv:
+  - invalid_emails: 8
+referential_integrity:
+  - order_items rows referencing non-existent orders: 34
